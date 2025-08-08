@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --font-paytone: 'Paytone One', sans-serif;
+  --font-paytone: "Paytone One", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 .font-paytone-custom {
   font-family: var(--font-paytone);
+}
+.font-poppins-custom {
+  font-family: var(--font-poppins); /* 👈 Create custom class */
 }
