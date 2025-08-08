@@ -61,7 +61,7 @@ export default function CarouselWithPopup() {
   };
 
   return (
-    <div className="w-full py-10 flex flex-col items-center justify-center min-h-screen relative overflow-hidden">
+    <div className="w-full py-4 flex flex-col items-center justify-center min-h-[70vh] relative overflow-hidden">
       <div className="flex items-center justify-center w-full gap-2 relative z-20">
         <div className="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-30" />
         <div className="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-30" />
@@ -117,7 +117,7 @@ export default function CarouselWithPopup() {
                   height={isCenter ? 360 : 250}
                   className="rounded-xl shadow-md"
                 />
-                <p className={`text-center font-semibold mt-2 ${isCenter ? 'text-gray-800' : 'text-white'}`}>{item.label}</p>
+                <p className={`text-center mt-2 font-paytone-custom font-extrabold text-center${isCenter ? 'text-blue-800' : 'text-white'}`}>{item.label}</p>
               </motion.div>
             );
           })}
