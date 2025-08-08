@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-// CarouselWithPopup.jsx
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Modal from './Modal';
@@ -9,7 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 const carouselData = Array.from({ length: 32 }, (_, i) => ({
   id: i + 1,
   label: `Day ${i + 1}`,
-  image: `/images/Rectangle 135-${i + 1 === 32 ? '' : i + 1}.png`
+  day: i + 1,
+  image: `/images/Rectangle 135-${i + 1 === 32 ? '' : i + 1}.png`,
+  title: `Archive Title ${i + 1}`,
+  name: `Saxena ${i + 1}`,
+  photographer: `Appurva Shah ${i + 1}`,
+  archiveLabel: `From the archive ${i + 1}` // 👈 add this
 }));
 
 export default function CarouselWithPopup() {
@@ -104,7 +108,7 @@ export default function CarouselWithPopup() {
                 key={item.id}
                 onClick={() => openModal(item.id)}
                 {...animationProps}
-                className={`relative rounded-xl overflow-hidden flex flex-col items-center justify-center ${isCenter ? 'scale-105' : 'scale-100'} ${zIndex}`}
+                className={`relative rounded-xl overflow-hidden flex flex-col items-center justify-center ${isCenter ? 'scale-110' : 'scale-105'} ${zIndex}`}
               >
                 <Image
                   src={item.image}
